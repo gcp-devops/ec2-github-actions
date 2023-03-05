@@ -44,5 +44,5 @@ jobs:
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_DEFAULT_OUTPUT: 'json'
       run: |
-        ./ci-terraform-init-plan-apply.sh
-        #./ci-terraform-destroy.sh
+        #./ci-terraform-init-plan-apply.sh
+        ./ci-terraform-destroy.sh
