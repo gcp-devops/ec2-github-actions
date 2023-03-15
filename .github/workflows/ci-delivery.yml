@@ -1,0 +1,28 @@
+name: 'CI-terraform-apply-aws-from-master-development'
+
+on:
+  push:
+    branches: [delivery]
+
+jobs:
+  terraform-apply-aws-from-master-development-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30 # default 360
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        ref: 'main'
+        fetch-depth: '1'
+    - name: 'Print dependencies'
+      run: |
+        ./ci-print-dependencies.sh
+    - name: 'CI terraform init plan apply Command'
+      timeout-minutes: 20
+      env:
+        ENV_NAME: 'development'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AwsAccessKeyIdStage }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AwsSecretAccessKeyStage }}
+        AWS_DEFAULT_REGION: 'us-east-1'
+        AWS_DEFAULT_OUTPUT: 'json'
+      run: |
+        ./ci-delivery.sh
