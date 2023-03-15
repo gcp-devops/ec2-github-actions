@@ -1,11 +1,11 @@
-name: 'CI-terraform-apply-aws-from-master-development'
+name: 'CI-terraform-development-integration'
 
 on:
   push:
     branches: [integration]
 
 jobs:
-  terraform-apply-aws-from-master-development-build:
+  terraform-development-integration:
     runs-on: ubuntu-latest
     timeout-minutes: 30 # default 360
     steps:
@@ -20,11 +20,8 @@ jobs:
       timeout-minutes: 20
       env:
         ENV_NAME: 'development'
-        TF_VAR_database_name: ${{ secrets.DatabaseNameDevelopment }}
-        TF_VAR_database_username: ${{ secrets.DatabaseUserDevelopment }}    
-        TF_VAR_database_password: ${{ secrets.DatabasePasswordDevelopment }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AwsAccessKeyId }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AwsSecretAccessKey }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWSACCESSKEYIDDEV }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECRETACCESSKEYDEV }}
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_DEFAULT_OUTPUT: 'json'
       run: |

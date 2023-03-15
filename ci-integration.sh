@@ -15,4 +15,3 @@ terraform validate
 
 terraform  plan -input=false -var-file="../../variables/development.tfvars"
 
-terraform  apply -auto-approve -input=false -var-file="../../variables/development.tfvars"
