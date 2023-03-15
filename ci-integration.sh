@@ -13,5 +13,6 @@ terraform init -reconfigure -input=false
 terraform fmt --recursive
 terraform validate
 
+## Terraform plan
 terraform  plan -input=false -var-file="../../variables/development.tfvars"
 
