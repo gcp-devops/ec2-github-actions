@@ -2,7 +2,7 @@ name: 'CI-terraform-production-build'
 
 on:
   push:
-    branches: [main]
+    branches: [destroy]
 
 jobs:
   terraform-production-build:
