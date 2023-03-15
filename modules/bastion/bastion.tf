@@ -14,6 +14,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
+## AWS Security group resource
 resource "aws_security_group" "bastion-sg" {
   name   = "bastion-security-group-${var.environment}"
   vpc_id = var.vpc_id
