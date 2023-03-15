@@ -20,5 +20,9 @@ jobs:
       timeout-minutes: 20
       env:
         ENV_NAME: 'development'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWSACCESSKEYIDDEV }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECRETACCESSKEYDEV }}
+        AWS_DEFAULT_REGION: 'us-east-1'
+        AWS_DEFAULT_OUTPUT: 'json'
       run: |
         ./ci-integration.sh
