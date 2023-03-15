@@ -1,4 +1,4 @@
-name: 'CI-terraform-apply-aws-from-master-development'
+name: 'CI-terraform-development-integration'
 
 on:
   push:
