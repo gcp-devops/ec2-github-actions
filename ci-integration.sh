@@ -1,3 +1,5 @@
+## Integration ##
+
 #!/bin/sh
 
 # Make the script to abort if any command fails
