@@ -5,7 +5,7 @@ on:
     branches: [integration]
 
 jobs:
-  terraform-apply-aws-from-master-development-build:
+  terraform-development-integration:
     runs-on: ubuntu-latest
     timeout-minutes: 30 # default 360
     steps:
