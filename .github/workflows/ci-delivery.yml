@@ -19,9 +19,9 @@ jobs:
     - name: 'CI terraform init plan apply Command'
       timeout-minutes: 20
       env:
-        ENV_NAME: 'development'
-        AWS_ACCESS_KEY_ID: ${{ secrets.AwsAccessKeyIdStage }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AwsSecretAccessKeyStage }}
+        ENV_NAME: 'staging'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWSACCESSKEYIDSTAGE }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECRETACCESSKEYSTAGE }}
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_DEFAULT_OUTPUT: 'json'
       run: |
