@@ -1,11 +1,11 @@
-name: 'CI-terraform-apply-aws-from-master-development'
+name: 'CI-terraform-production-build'
 
 on:
   push:
     branches: [main]
 
 jobs:
-  terraform-apply-aws-from-master-development-build:
+  terraform-production-build:
     runs-on: ubuntu-latest
     timeout-minutes: 30 # default 360
     steps:
@@ -19,9 +19,9 @@ jobs:
     - name: 'CI terraform init plan apply Command'
       timeout-minutes: 20
       env:
-        ENV_NAME: 'development'
-        AWS_ACCESS_KEY_ID: ${{ secrets.AwsAccessKeyIdProd }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AwsSecretAccessKeyProd }}
+        ENV_NAME: 'production'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWSACCESSKEYIDPROD }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECRETACCESSKEYPROD }}
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_DEFAULT_OUTPUT: 'json'
       run: |
