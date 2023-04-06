@@ -1,5 +1,5 @@
 # Github Actions + AWS + Terraform
-# Requesting merge form fork 
+# Requesting merge form fork - pls review
 Repository to demonstrate Infrastructur-As-Code using:
 
 * Github Actions Pipelines
