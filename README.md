@@ -1,5 +1,5 @@
 # Github Actions + AWS + Terraform
-# pls review before merging. Requesting merge form fork 
+# pls review before merging. Requesting merge form fork
 Repository to demonstrate Infrastructur-As-Code using:
 
 * Github Actions Pipelines
